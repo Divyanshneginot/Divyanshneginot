@@ -6,6 +6,7 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/divyanshneginot)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Divyanshneginot)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:divyanshneginot@gmail.com)
+[![Resume](https://img.shields.io/badge/Resume-PDF-red?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](./Divyansh%20Negi%20-%20Resume.pdf)
 [![Live Demo](https://img.shields.io/badge/OmniQuery_AI-Live_App-6366f1?style=for-the-badge&logo=vercel)](https://omni-query-ai.vercel.app/)
 
 <p align="center">
