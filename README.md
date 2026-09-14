@@ -1,10 +1,10 @@
 <div align="center">
 
 # Divyansh Negi
-**Systems & Backend Engineer · Autonomous Agent Architectures · Columnar OLAP**
+**Backend & Systems Engineer · Distributed Architectures · Columnar OLAP**
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=15&duration=2800&pause=1200&color=6366F1&center=true&vCenter=true&width=550&lines=%3E_++Autonomous+Agent+Architectures+%26+Reasoning+Loops;%3E_++Model+Context+Protocol+(FastMCP)+Integrations;%3E_++Sub-200ms+OLAP+Analytics+with+ClickHouse;%3E_++Real-Time+Full-Stack+Systems+with+FastAPI+%26+React" alt="Typing Animation" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=15&duration=2800&pause=1200&color=6366F1&center=true&vCenter=true&width=580&lines=%3E_++High-Throughput+Async+APIs+with+FastAPI+%26+Node.js;%3E_++Low-Latency+Columnar+OLAP+on+ClickHouse+%26+DuckDB;%3E_++Distributed+Systems%2C+Concurrency+%26+Real-Time+SSE;%3E_++Standardized+Tool+Interfaces+(Model+Context+Protocol)" alt="Typing Animation" />
 </p>
 
 <p align="center">
@@ -20,54 +20,55 @@
 
 ### Core Focus
 
-I design and build **autonomous tool-using agents**, **low-latency analytical backends**, and **reliable distributed systems**.
+I architect and build **backend infrastructure**, **high-throughput asynchronous services**, and **low-latency analytical data systems**.
 
-- **Protocol-Driven Agents:** Connecting LLMs to real production environments via the **Model Context Protocol (FastMCP)**, utilizing dynamic schema introspection and self-healing reflection loops.
-- **Columnar & Analytical Data:** Sub-200ms OLAP queries over **ClickHouse Cloud** paired with in-memory **DuckDB** failover engines for zero-downtime execution.
-- **Full-Stack & Real-Time APIs:** High-throughput async backends with **FastAPI**, **Node.js**, **TypeScript**, and **Server-Sent Events (SSE)**.
+- **High-Throughput APIs & Microservices:** Async architectures in **FastAPI**, **Node.js**, and **Apollo GraphQL**; implementing low-latency REST/RPC gateways, real-time event streaming (SSE), and connection pooling.
+- **Columnar OLAP & Storage Engines:** Sub-200ms analytical execution over **ClickHouse Cloud**, automated runtime schema discovery, and zero-downtime failover to in-memory **DuckDB**.
+- **Protocol Engineering & Fault Tolerance:** Interfacing services with databases and external runtimes via the **Model Context Protocol (FastMCP)**; self-healing reflection loops that intercept database syntax exceptions and self-correct with a **99%+ success rate**.
 
 ---
 
 ### Featured Systems
 
 #### 🎬 [OmniQuery AI](https://github.com/Divyanshneginot/OmniQuery-AI) · [Live Application](https://omni-query-ai.vercel.app/)
-*Autonomous conversational analytics agent translating natural language into ClickHouse OLAP SQL with real-time SSE streaming.*
+*High-performance analytical query gateway translating natural language into ClickHouse OLAP SQL with real-time SSE streaming.*
 
 ```
-User Query (Natural Language) ──► FastAPI SSE Gateway ──► Google ADK (Gemini 3.6 Flash)
-                                                                 │
-      ┌──────────────────────────────────────────────────────────┴────────────────────────┐
+User Request ──► FastAPI SSE Gateway ──► Query Planning & Introspection (Google ADK)
+                                                         │
+      ┌──────────────────────────────────────────────────┴────────────────────────────────┐
       ▼                                                                                   ▼
-Schema Introspection & Planning                                             Execution & Reflection Loop
-(Official mcp-clickhouse / FastMCP)                                         (Dialect catch & self-healing)
+Runtime Protocol Handler (FastMCP)                                          Execution & Self-Healing Loop
+(mcp-clickhouse: table discovery)                                           (Catches compiler errors & heals)
       │                                                                                   │
       ▼                                                                                   ▼
-ClickHouse Cloud (GCP) ──[Automatic Failover]──► In-Memory DuckDB ─────────► React 19 Canvas (Live SSE)
+ClickHouse Cloud (GCP) ──[Automatic Failover]──► In-Memory DuckDB ─────────► Async SSE Stream ──► Client
 ```
 
-- **Runtime MCP Integration:** Direct integration with official `mcp-clickhouse` server for dynamic runtime schema discovery, metadata introspection, and isolated query execution.
-- **Self-Healing SQL Loop:** Automatically intercepts database compiler exceptions and SQL dialect errors, diagnosing error traces and regenerating valid queries with a **99%+ success rate**.
-- **Zero-Downtime Dual Engine:** Primary execution on ClickHouse Cloud on GCP with transparent automatic fallback to in-memory DuckDB.
-- **Real-Time Trace Streaming:** Streams execution traces, multi-turn reasoning steps, and responsive Recharts visual cards to React 19 via Server-Sent Events (SSE).
-- **Stack:** `Python` · `FastAPI` · `ClickHouse Cloud` · `FastMCP` · `DuckDB` · `React 19` · `TypeScript` · `Tailwind CSS`
+- **Query Gateway & Protocol:** Built a high-performance backend gateway utilizing FastAPI and Model Context Protocol (`mcp-clickhouse`), dynamically introspecting schemas and compiling natural language queries into optimized ClickHouse SQL.
+- **Self-Healing Execution Loop:** Intercepts database compiler exceptions and SQL dialect errors at the driver level, running reflection logic to regenerate valid queries on the fly with a **99%+ success rate**.
+- **Zero-Downtime Dual Engine:** Automated failover redirecting analytical queries from ClickHouse Cloud on GCP to in-memory DuckDB during cluster degradation or network partitions.
+- **Real-Time Event Streaming:** Implemented an asynchronous Server-Sent Events (SSE) streaming engine delivering live query execution plans, timing metrics, and data payloads.
+- **Stack:** `Python` · `FastAPI` · `ClickHouse Cloud` · `FastMCP` · `DuckDB` · `AsyncIO` · `TypeScript` · `Docker`
 
 ---
 
 #### 📄 [Full-Stack AI Document Intelligence Platform](https://github.com/Divyanshneginot)
-*Microservices-based document parsing, hybrid extraction, and conversational semantic search.*
+*Distributed microservices document ingestion, hybrid parsing, and semantic retrieval engine.*
 
-- **Dynamic Query Routing:** Deployed an intelligent LLM query classification agent to distinguish between single-hop factual retrieval and multi-hop synthesis, reducing LLM token consumption and latency by **35%**.
-- **Resilient Hybrid Ingestion:** Ingestion harness pairing digital text extraction (PyMuPDF) with OCR fallback (EasyOCR) for complex scans and tables, indexing semantic chunks into ChromaDB.
-- **Provider Failover:** Real-time Server-Sent Events (SSE) streaming with multi-provider failover (Gemini 1.5 Flash to Groq LLaMA 3.3 70B) to guarantee continuous availability.
-- **Stack:** `Python` · `FastAPI` · `Express.js` · `TypeScript` · `ChromaDB` · `React` · `Docker`
+- **Microservices Topology:** Polyglot architecture separating an Express.js API Gateway (auth, routing, client sessions) from a dedicated FastAPI async compute worker.
+- **Dynamic Query Classifier:** Routing engine that dynamically classifies incoming requests between single-hop factual lookups and multi-hop synthesis, cutting compute latency and token consumption by **35%**.
+- **Resilient Ingestion Pipeline:** Multi-stage document processing worker pairing digital text extraction (PyMuPDF) with OCR fallback (EasyOCR), indexing chunks into ChromaDB for vector retrieval.
+- **Provider Failover:** Real-time Server-Sent Events (SSE) streaming with multi-provider failover (Gemini 1.5 Flash to Groq LLaMA 3.3 70B) to guarantee continuous service availability.
+- **Stack:** `Python` · `FastAPI` · `Express.js` · `Node.js` · `TypeScript` · `ChromaDB` · `Docker`
 
 ---
 
 #### ⚖️ [Legal Contract Summarization & Evaluation Engine](https://github.com/Divyanshneginot)
-*Automated contract analysis pipeline with autonomous multi-agent evaluation.*
+*High-throughput document analysis worker with autonomous multi-agent evaluation harness.*
 
-- **Document Distillation:** Condenses complex 50+ page legal agreements into structured 1-page executive briefs using semantic chunking and dense vector retrieval.
-- **Autonomous Evaluation Harness:** Systematic multi-agent benchmarking harness to evaluate output coherence, summary completeness, and factual faithfulness against human reference briefs.
+- **Document Processing Engine:** High-throughput asynchronous batch pipeline utilizing semantic chunking and dense vector retrieval to condense dense 50+ page agreements into structured 1-page briefs.
+- **Evaluation Harness:** Automated benchmarking harness to evaluate output coherence, summary completeness, and factual faithfulness against human reference documents.
 - **Stack:** `Python` · `LangChain` · `HuggingFace Transformers` · `ChromaDB` · `RAG`
 
 ---
@@ -76,10 +77,10 @@ ClickHouse Cloud (GCP) ──[Automatic Failover]──► In-Memory DuckDB ─�
 
 | Domain | Technologies |
 |---|---|
-| **Languages** | Python, TypeScript, JavaScript, SQL, C++, Java, Bash |
-| **Agent Architecture & Protocols** | Model Context Protocol (FastMCP), Google ADK, LangChain, Multi-Turn ReAct Loops, Self-Healing Reflection |
-| **Backend & Cloud** | FastAPI, Node.js, Express, Docker, CI/CD (GitHub Actions), REST, GraphQL (Apollo), Server-Sent Events (SSE), GCP, Linux |
-| **Databases & Vector Stores** | ClickHouse Cloud, DuckDB, PostgreSQL, ChromaDB, Redis, MongoDB |
+| **Core Languages** | Python, TypeScript, JavaScript, SQL, C++, Java, Bash |
+| **Backend & Distributed Systems** | FastAPI, Node.js, Express, Apollo GraphQL, REST APIs, Server-Sent Events (SSE), AsyncIO, Concurrency, Microservices |
+| **Databases & Storage Engines** | ClickHouse Cloud, DuckDB, PostgreSQL, ChromaDB, Redis, MongoDB |
+| **Protocols & Infrastructure** | Model Context Protocol (FastMCP), Docker, GitHub Actions (CI/CD), Linux/Unix, Google Cloud (GCP), OCI |
 
 ---
 
@@ -94,5 +95,5 @@ ClickHouse Cloud (GCP) ──[Automatic Failover]──► In-Memory DuckDB ─�
 ---
 
 <div align="center">
-  <sub>Divyansh Negi · <a href="https://linkedin.com/in/divyanshneginot">LinkedIn</a> · <a href="mailto:divyanshneginot@gmail.com">Email</a> · <a href="./Divyansh%20Negi%20-%20Resume.pdf">Resume</a></sub>
+  <sub>Divyansh Negi · <a href="https://linkedin.com/in/divyanshneginot">LinkedIn</a> · <a href="mailto:divyanshneginot@gmail.com">Email</a> · <a href="https://github.com/Divyanshneginot/Divyanshneginot/blob/main/Divyansh%20Negi%20-%20Resume.pdf">Resume</a></sub>
 </div>
