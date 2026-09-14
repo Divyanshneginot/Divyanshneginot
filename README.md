@@ -1,107 +1,91 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,14,24&height=170&section=header&text=Divyansh%20Negi&fontSize=40&fontAlignY=36&desc=Systems%20%C2%B7%20Autonomous%20Agents%20%C2%B7%20Columnar%20OLAP&descAlignY=58&descSize=15&fontColor=ffffff" width="100%"/>
-</div>
 
-<div align="center">
+# Divyansh Negi
+**Systems & Backend Engineer · Autonomous Agent Architectures · Columnar OLAP**
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/divyanshneginot)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:divyanshneginot@gmail.com)
-[![Resume](https://img.shields.io/badge/Resume-PDF-4B5563?style=flat-square&logo=adobeacrobatreader&logoColor=white)](./Divyansh%20Negi%20-%20Resume.pdf)
-[![OmniQuery AI](https://img.shields.io/badge/OmniQuery_AI-Live_Demo-6366f1?style=flat-square&logo=vercel&logoColor=white)](https://omni-query-ai.vercel.app/)
+<p align="center">
+  <a href="https://linkedin.com/in/divyanshneginot"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="mailto:divyanshneginot@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="./Divyansh%20Negi%20-%20Resume.pdf"><img src="https://img.shields.io/badge/Resume-1-Page_PDF-0F172A?style=flat-square&logo=adobeacrobatreader&logoColor=white" alt="Resume" /></a>
+  <a href="https://omni-query-ai.vercel.app/"><img src="https://img.shields.io/badge/Live_App-omni--query--ai.vercel.app-6366F1?style=flat-square&logo=vercel&logoColor=white" alt="OmniQuery AI" /></a>
+</p>
 
 </div>
 
 ---
 
-### ⚡ Overview
+### Core Focus
 
-Software engineer focusing on **backend systems**, **standardized agent protocols (FastMCP)**, **columnar data engines**, and **distributed pipelines**.
+I design and build **autonomous tool-using agents**, **low-latency analytical backends**, and **reliable distributed systems**.
 
-- **Protocols & Agent Loops:** Building systems interfacing LLMs with production databases via Model Context Protocol (MCP), using self-healing SQL reflection loops to catch dialect errors.
-- **Analytical Storage:** Sub-200ms OLAP query execution across ClickHouse Cloud and in-memory DuckDB with dual-engine failover.
-- **Full-Stack & APIs:** End-to-end architectures utilizing TypeScript, React 19, FastAPI, Node.js, and Server-Sent Events (SSE).
+- **Protocol-Driven Agents:** Connecting LLMs to real production environments via the **Model Context Protocol (FastMCP)**, utilizing dynamic schema introspection and self-healing reflection loops.
+- **Columnar & Analytical Data:** Sub-200ms OLAP queries over **ClickHouse Cloud** paired with in-memory **DuckDB** failover engines for zero-downtime execution.
+- **Full-Stack & Real-Time APIs:** High-throughput async backends with **FastAPI**, **Node.js**, **TypeScript**, and **Server-Sent Events (SSE)**.
 
 ---
 
-### 🛠️ Technical Stack
+### Featured Systems
 
-<div align="center">
+#### 🎬 [OmniQuery AI](https://github.com/Divyanshneginot/OmniQuery-AI) · [Live Application](https://omni-query-ai.vercel.app/)
+*Autonomous conversational analytics agent translating natural language into ClickHouse OLAP SQL with real-time SSE streaming.*
+
+```
+User Query (Natural Language) ──► FastAPI SSE Gateway ──► Google ADK (Gemini 3.6 Flash)
+                                                                 │
+      ┌──────────────────────────────────────────────────────────┴────────────────────────┐
+      ▼                                                                                   ▼
+Schema Introspection & Planning                                             Execution & Reflection Loop
+(Official mcp-clickhouse / FastMCP)                                         (Dialect catch & self-healing)
+      │                                                                                   │
+      ▼                                                                                   ▼
+ClickHouse Cloud (GCP) ──[Automatic Failover]──► In-Memory DuckDB ─────────► React 19 Canvas (Live SSE)
+```
+
+- **Runtime MCP Integration:** Direct integration with official `mcp-clickhouse` server for dynamic runtime schema discovery, metadata introspection, and isolated query execution.
+- **Self-Healing SQL Loop:** Automatically intercepts database compiler exceptions and SQL dialect errors, diagnosing error traces and regenerating valid queries with a **99%+ success rate**.
+- **Zero-Downtime Dual Engine:** Primary execution on ClickHouse Cloud on GCP with transparent automatic fallback to in-memory DuckDB.
+- **Real-Time Trace Streaming:** Streams execution traces, multi-turn reasoning steps, and responsive Recharts visual cards to React 19 via Server-Sent Events (SSE).
+- **Stack:** `Python` · `FastAPI` · `ClickHouse Cloud` · `FastMCP` · `DuckDB` · `React 19` · `TypeScript` · `Tailwind CSS`
+
+---
+
+#### 📄 [Full-Stack AI Document Intelligence Platform](https://github.com/Divyanshneginot)
+*Microservices-based document parsing, hybrid extraction, and conversational semantic search.*
+
+- **Dynamic Query Routing:** Deployed an intelligent LLM query classification agent to distinguish between single-hop factual retrieval and multi-hop synthesis, reducing LLM token consumption and latency by **35%**.
+- **Resilient Hybrid Ingestion:** Ingestion harness pairing digital text extraction (PyMuPDF) with OCR fallback (EasyOCR) for complex scans and tables, indexing semantic chunks into ChromaDB.
+- **Provider Failover:** Real-time Server-Sent Events (SSE) streaming with multi-provider failover (Gemini 1.5 Flash to Groq LLaMA 3.3 70B) to guarantee continuous availability.
+- **Stack:** `Python` · `FastAPI` · `Express.js` · `TypeScript` · `ChromaDB` · `React` · `Docker`
+
+---
+
+#### ⚖️ [Legal Contract Summarization & Evaluation Engine](https://github.com/Divyanshneginot)
+*Automated contract analysis pipeline with autonomous multi-agent evaluation.*
+
+- **Document Distillation:** Condenses complex 50+ page legal agreements into structured 1-page executive briefs using semantic chunking and dense vector retrieval.
+- **Autonomous Evaluation Harness:** Systematic multi-agent benchmarking harness to evaluate output coherence, summary completeness, and factual faithfulness against human reference briefs.
+- **Stack:** `Python` · `LangChain` · `HuggingFace Transformers` · `ChromaDB` · `RAG`
+
+---
+
+### Technical Arsenal
 
 | Domain | Technologies |
 |---|---|
-| **Languages** | `Python` · `TypeScript` · `JavaScript` · `SQL` · `C++` · `Java` · `Bash` |
-| **Agent & Protocols** | `Model Context Protocol (FastMCP)` · `Google ADK` · `LangChain` · `Vector Search` |
-| **Backend & APIs** | `FastAPI` · `Node.js` · `Express` · `GraphQL (Apollo)` · `REST` · `Server-Sent Events (SSE)` |
-| **Databases & Storage** | `ClickHouse Cloud` · `DuckDB` · `PostgreSQL` · `ChromaDB` · `Redis` · `MongoDB` |
-| **DevOps & Cloud** | `Docker` · `GitHub Actions (CI/CD)` · `Linux/Unix` · `Google Cloud (GCP)` · `OCI` |
-
-</div>
+| **Languages** | Python, TypeScript, JavaScript, SQL, C++, Java, Bash |
+| **Agent Architecture & Protocols** | Model Context Protocol (FastMCP), Google ADK, LangChain, Multi-Turn ReAct Loops, Self-Healing Reflection |
+| **Backend & Cloud** | FastAPI, Node.js, Express, Docker, CI/CD (GitHub Actions), REST, GraphQL (Apollo), Server-Sent Events (SSE), GCP, Linux |
+| **Databases & Vector Stores** | ClickHouse Cloud, DuckDB, PostgreSQL, ChromaDB, Redis, MongoDB |
 
 ---
 
-### 🚀 Featured Systems
+### Certifications & Accreditations
 
-<table>
-  <tr>
-    <td width="100%">
-      <h3>🎬 <a href="https://github.com/Divyanshneginot/OmniQuery-AI">OmniQuery AI</a> · <a href="https://omni-query-ai.vercel.app/">Live Application</a></h3>
-      <p><em>Autonomous conversational analytics agent translating natural language into ClickHouse OLAP SQL with real-time SSE streaming.</em></p>
-      <ul>
-        <li><strong>Architecture:</strong> Google ADK + Gemini 3.6 Flash paired with official <code>mcp-clickhouse</code> (FastMCP) for schema introspection.</li>
-        <li><strong>Self-Healing Reflection:</strong> Catches database dialect and syntax exceptions, automatically regenerating valid queries with a <strong>99%+ success rate</strong>.</li>
-        <li><strong>High Availability:</strong> Dual-engine failover from ClickHouse Cloud on GCP to in-memory DuckDB for zero-downtime execution.</li>
-        <li><strong>Frontend:</strong> React 19 dashboard with interactive Recharts metrics and live streaming query traces.</li>
-      </ul>
-      <p><code>Python</code> · <code>FastAPI</code> · <code>ClickHouse Cloud</code> · <code>FastMCP</code> · <code>DuckDB</code> · <code>React 19</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td width="100%">
-      <h3>📄 <a href="https://github.com/Divyanshneginot">Full-Stack AI Document Intelligence Platform</a></h3>
-      <p><em>Microservices document ingestion and conversational semantic search engine.</em></p>
-      <ul>
-        <li><strong>Routing:</strong> Dynamic LLM query classifier routes requests between simple lookups and multi-hop reasoning, cutting token costs by <strong>35%</strong>.</li>
-        <li><strong>Ingestion Pipeline:</strong> Digital PDF extraction (PyMuPDF) with OCR fallback (EasyOCR), indexing dense embeddings into ChromaDB.</li>
-        <li><strong>Failover:</strong> Server-Sent Events (SSE) streaming with multi-provider failover (Gemini Flash & Groq LLaMA 3.3 70B).</li>
-      </ul>
-      <p><code>FastAPI</code> · <code>Express.js</code> · <code>TypeScript</code> · <code>ChromaDB</code> · <code>React</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td width="100%">
-      <h3>⚖️ <a href="https://github.com/Divyanshneginot">Legal Contract Summarization & Evaluation Engine</a></h3>
-      <p><em>Automated document analysis pipeline with autonomous multi-agent evaluation.</em></p>
-      <ul>
-        <li><strong>Distillation:</strong> Distills 50+ page contracts into structured 1-page executive briefs using semantic chunking.</li>
-        <li><strong>Evaluation Harness:</strong> Systematic multi-agent benchmarking to score output coherence and factual faithfulness against human legal references.</li>
-      </ul>
-      <p><code>Python</code> · <code>LangChain</code> · <code>HuggingFace Transformers</code> · <code>ChromaDB</code> · <code>RAG</code></p>
-    </td>
-  </tr>
-</table>
-
----
-
-### 📜 Certifications & Credentials
-
-- 🐳 **Full Stack Open: Containers (Docker)** — University of Helsinki (*Sep 2026*) · [Verify Credential](https://courses.mooc.fi/certificates/validate/en46yghwh8mmy4p)
-- 🧠 **LLM Zoomcamp 2026** — DataTalks.Club (*Aug 2026*) · *Credential ID: 6F7D81*
+- 🐳 **Full Stack Open: Containers (Docker)** — University of Helsinki (*Sep 2026*) · [Verify](https://courses.mooc.fi/certificates/validate/en46yghwh8mmy4p)
+- 🧠 **LLM Zoomcamp 2026** — DataTalks.Club (*Aug 2026*) · *ID: 6F7D81*
 - 🌐 **Full Stack Open Certification (React, TypeScript, GraphQL, CI/CD)** — University of Helsinki (*Jun 2026*)
 - 📊 **Applied Data Science Lab** — WorldQuant University (*Apr 2026*)
 - ☁️ **Oracle Cloud Infrastructure 2025 AI Foundations Associate** — Oracle (*Oct 2025*)
-
----
-
-### 📈 Activity & Languages
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Divyanshneginot&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117" width="48%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Divyanshneginot&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117" width="48%" />
-</div>
-
-<div align="center">
-  <img src="https://streak-stats.demolab.com?user=Divyanshneginot&theme=tokyonight&hide_border=true&background=0D1117" width="97%" />
-</div>
 
 ---
 
