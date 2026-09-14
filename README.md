@@ -4,6 +4,10 @@
 **Systems & Backend Engineer · Autonomous Agent Architectures · Columnar OLAP**
 
 <p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=15&duration=2800&pause=1200&color=6366F1&center=true&vCenter=true&width=550&lines=%3E_++Autonomous+Agent+Architectures+%26+Reasoning+Loops;%3E_++Model+Context+Protocol+(FastMCP)+Integrations;%3E_++Sub-200ms+OLAP+Analytics+with+ClickHouse;%3E_++Real-Time+Full-Stack+Systems+with+FastAPI+%26+React" alt="Typing Animation" />
+</p>
+
+<p align="center">
   <a href="https://linkedin.com/in/divyanshneginot"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   <a href="mailto:divyanshneginot@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
   <a href="https://github.com/Divyanshneginot/Divyanshneginot/blob/main/Divyansh%20Negi%20-%20Resume.pdf"><img src="https://img.shields.io/badge/Resume-PDF-red?style=flat-square&logo=adobe&logoColor=white" alt="Resume" /></a>
