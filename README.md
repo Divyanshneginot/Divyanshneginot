@@ -8,9 +8,7 @@
 **Backend & Systems Engineer · Distributed Architectures · Columnar OLAP**
 
 <p align="center">
-  <a href="https://readme-typing-svg.demolab.com">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=15&duration=2500&pause=1000&color=6366F1&multiline=true&width=620&height=105&lines=curl+-s+https%3A%2F%2Fapi.divyansh.dev%2Fstatus;%7B+%22role%22%3A+%22Backend+%26+Systems+Engineer%22%2C+%22focus%22%3A+%22OLAP+%26+FastMCP%22+%7D;%7B+%22core_stack%22%3A+%5B%22FastAPI%22%2C+%22ClickHouse%22%2C+%22Node.js%22%2C+%22Docker%22%5D+%7D" alt="Terminal Command Animation" />
-  </a>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=14&duration=2800&pause=1200&color=6366F1&center=true&vCenter=true&width=520&lines=%3E_++High-Throughput+Async+APIs+with+FastAPI+%26+Node.js;%3E_++Low-Latency+Columnar+OLAP+on+ClickHouse+%26+DuckDB;%3E_++Distributed+Systems+%26+Real-Time+SSE+Streaming;%3E_++Model+Context+Protocol+(FastMCP)+Integrations" alt="Typing Animation" />
 </p>
 
 <p align="center">
