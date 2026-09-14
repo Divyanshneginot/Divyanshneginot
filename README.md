@@ -57,7 +57,7 @@ I architect and build **backend infrastructure**, **high-throughput asynchronous
 
 ---
 
-### 🚀 Featured Systems
+### 🚀 Featured System
 
 #### 🎬 [OmniQuery AI](https://github.com/Divyanshneginot/OmniQuery-AI) · [Live Application](https://omni-query-ai.vercel.app/)
 *High-performance analytical query gateway translating natural language into ClickHouse OLAP SQL with real-time SSE streaming.*
@@ -79,26 +79,6 @@ ClickHouse Cloud (GCP) ──[Automatic Failover]──► In-Memory DuckDB ─�
 - **Zero-Downtime Dual Engine:** Automated failover redirecting analytical queries from ClickHouse Cloud on GCP to in-memory DuckDB during cluster degradation or network partitions.
 - **Real-Time Event Streaming:** Implemented an asynchronous Server-Sent Events (SSE) streaming engine delivering live query execution plans, timing metrics, and data payloads.
 - **Stack:** `Python` · `FastAPI` · `ClickHouse Cloud` · `FastMCP` · `DuckDB` · `AsyncIO` · `TypeScript` · `Docker`
-
----
-
-#### 📄 [Full-Stack AI Document Intelligence Platform](https://github.com/Divyanshneginot)
-*Distributed microservices document ingestion, hybrid parsing, and semantic retrieval engine.*
-
-- **Microservices Topology:** Polyglot architecture separating an Express.js API Gateway (auth, routing, client sessions) from a dedicated FastAPI async compute worker.
-- **Dynamic Query Classifier:** Routing engine that dynamically classifies incoming requests between single-hop factual lookups and multi-hop synthesis, cutting compute latency and token consumption by **35%**.
-- **Resilient Ingestion Pipeline:** Multi-stage document processing worker pairing digital text extraction (PyMuPDF) with OCR fallback (EasyOCR), indexing chunks into ChromaDB for vector retrieval.
-- **Provider Failover:** Real-time Server-Sent Events (SSE) streaming with multi-provider failover (Gemini 1.5 Flash to Groq LLaMA 3.3 70B) to guarantee continuous service availability.
-- **Stack:** `Python` · `FastAPI` · `Express.js` · `Node.js` · `TypeScript` · `ChromaDB` · `Docker`
-
----
-
-#### ⚖️ [Legal Contract Summarization & Evaluation Engine](https://github.com/Divyanshneginot)
-*High-throughput document analysis worker with autonomous multi-agent evaluation harness.*
-
-- **Document Processing Engine:** High-throughput asynchronous batch pipeline utilizing semantic chunking and dense vector retrieval to condense dense 50+ page agreements into structured 1-page briefs.
-- **Evaluation Harness:** Automated benchmarking harness to evaluate output coherence, summary completeness, and factual faithfulness against human reference documents.
-- **Stack:** `Python` · `LangChain` · `HuggingFace Transformers` · `ChromaDB` · `RAG`
 
 ---
 
