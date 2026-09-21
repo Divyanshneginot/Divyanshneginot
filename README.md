@@ -83,8 +83,10 @@ ClickHouse Cloud (GCP) ──[Automatic Failover]──► In-Memory DuckDB ─�
 ### 📜 Certifications & Accreditations
 
 - 🐳 **Full Stack Open: Containers (Docker)** — University of Helsinki (*Sep 2026*) · [Verify](https://courses.mooc.fi/certificates/validate/en46yghwh8mmy4p)
+- 🔷 **Full Stack Open: TypeScript** — University of Helsinki (*Aug 2026*) · [Verify](https://courses.mooc.fi/certificates/validate/ujmksp84ds2xbi3)
 - 🧠 **LLM Zoomcamp 2026** — DataTalks.Club (*Aug 2026*) · *ID: 6F7D81*
-- 🌐 **Full Stack Open Certification (React, TypeScript, GraphQL, CI/CD)** — University of Helsinki (*Jun 2026*)
+- 🕸️ **Full Stack Open: GraphQL** — University of Helsinki (*Jul 2026*) · [Verify](https://courses.mooc.fi/certificates/validate/pzaedinbu35e4aj)
+- 🌐 **Full Stack Open: Core (React, Node, CI/CD)** — University of Helsinki (*Jun 2026*) · [Verify](https://studies.cs.helsinki.fi/stats/api/certificate/fullstackopen/en/9eb2299a446d7e2bf6642ef1db80c49f)
 - 📊 **Applied Data Science Lab** — WorldQuant University (*Apr 2026*)
 - ☁️ **Oracle Cloud Infrastructure 2025 AI Foundations Associate** — Oracle (*Oct 2025*)
 
