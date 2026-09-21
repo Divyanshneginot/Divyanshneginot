@@ -28,7 +28,7 @@ I architect and build **backend infrastructure**, **high-throughput asynchronous
 
 - **High-Throughput APIs & Microservices:** Async architectures in **FastAPI**, **Node.js**, and **Apollo GraphQL**; implementing low-latency REST/RPC gateways, real-time event streaming (SSE), and connection pooling.
 - **Columnar OLAP & Storage Engines:** Sub-200ms analytical execution over **ClickHouse Cloud**, automated runtime schema discovery, and zero-downtime failover to in-memory **DuckDB**.
-- **Protocol Engineering & Fault Tolerance:** Interfacing services with databases and external runtimes via the **Model Context Protocol (FastMCP)**; self-healing reflection loops that intercept database syntax exceptions and self-correct with a **99%+ success rate**.
+- **Protocol Engineering & Fault Tolerance:** Interfacing services with databases and external runtimes via the **Model Context Protocol (FastMCP)**; self-healing reflection loops that intercept database syntax exceptions and iteratively self-heal queries.
 
 ---
 
@@ -73,10 +73,19 @@ ClickHouse Cloud (GCP) ──[Automatic Failover]──► In-Memory DuckDB ─�
 ```
 
 - **Query Gateway & Protocol:** Built a high-performance backend gateway utilizing FastAPI and Model Context Protocol (`mcp-clickhouse`), dynamically introspecting schemas and compiling natural language queries into optimized ClickHouse SQL.
-- **Self-Healing Execution Loop:** Intercepts database compiler exceptions and SQL dialect errors at the driver level, running reflection logic to regenerate valid queries on the fly with a **99%+ success rate**.
+- **Self-Healing Execution Loop:** Intercepts database compiler exceptions and SQL dialect errors at the driver level, running reflection logic to iteratively regenerate and execute valid SQL against the target dialect.
 - **Zero-Downtime Dual Engine:** Automated failover redirecting analytical queries from ClickHouse Cloud on GCP to in-memory DuckDB during cluster degradation or network partitions.
 - **Real-Time Event Streaming:** Implemented an asynchronous Server-Sent Events (SSE) streaming engine delivering live query execution plans, timing metrics, and data payloads.
 - **Stack:** `Python` · `FastAPI` · `ClickHouse Cloud` · `FastMCP` · `DuckDB` · `AsyncIO` · `TypeScript` · `Docker`
+
+<br/>
+
+#### 🛡️ [Turtleneck](https://github.com/Divyanshneginot/turtleneck)
+*Senior UI/UX architect and runtime policy engine for AI coding agents with automated WCAG AA gates.*
+
+- **Design Taste Enforcement:** Intercepts agent code generation pipelines across Claude Code, Cursor, Windsurf, Copilot, and Google Antigravity, preventing generic AI interface slop (low-contrast opacity, 800ms delays, broken keyboard focus).
+- **Automated Quality Gates:** Bundles verifiable test suites asserting contrast ratios, touch targets, and motion budgets with standard-library zero-dependency installers.
+- **Stack:** `Python` · `Agentic Frameworks` · `Design Systems` · `WCAG 2.2` · `CI/CD`
 
 ---
 
