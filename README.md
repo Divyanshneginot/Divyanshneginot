@@ -1,110 +1,84 @@
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,16,28&height=140&section=header" width="100%"/>
-</div>
-
-<div align="center">
-
 # Divyansh Negi
-**Backend & Systems Engineer · Distributed Architectures · Columnar OLAP**
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=14&duration=2800&pause=1200&color=6366F1&center=true&vCenter=true&width=520&lines=%3E_++High-Throughput+Async+APIs+with+FastAPI+%26+Node.js;%3E_++Low-Latency+Columnar+OLAP+on+ClickHouse+%26+DuckDB;%3E_++Distributed+Systems+%26+Real-Time+SSE+Streaming;%3E_++Model+Context+Protocol+(FastMCP)+Integrations" alt="Typing Animation" />
-</p>
+**Backend & Systems Engineer** · Distributed Architectures & Columnar OLAP  
+Building low-latency query gateways, streaming APIs, and protocol-driven fault-tolerant services.
 
-<p align="center">
-  <a href="https://linkedin.com/in/divyanshneginot"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="mailto:divyanshneginot@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
-  <a href="https://github.com/Divyanshneginot/Divyanshneginot/blob/main/Divyansh%20Negi%20-%20Resume.pdf"><img src="https://img.shields.io/badge/Resume-PDF-red?style=flat-square&logo=adobe&logoColor=white" alt="Resume" /></a>
-  <a href="https://omni-query-ai.vercel.app/"><img src="https://img.shields.io/badge/Live_App-omni--query--ai.vercel.app-6366F1?style=flat-square&logo=vercel&logoColor=white" alt="OmniQuery AI" /></a>
-</p>
+[LinkedIn](https://linkedin.com/in/divyanshneginot) · [Email](mailto:divyanshneginot@gmail.com) · [Resume (PDF)](https://github.com/Divyanshneginot/Divyanshneginot/blob/main/Divyansh%20Negi%20-%20Resume.pdf) · [Live Demo](https://omni-query-ai.vercel.app/)
 
-</div>
+*Open to backend, data platform, and distributed systems engineering opportunities.*
 
 ---
 
-### ⚡ Core Focus
+### What I Build
 
-I architect and build **backend infrastructure**, **high-throughput asynchronous services**, and **low-latency analytical data systems**.
-
-- **High-Throughput APIs & Microservices:** Async architectures in **FastAPI**, **Node.js**, and **Apollo GraphQL**; implementing low-latency REST/RPC gateways, real-time event streaming (SSE), and connection pooling.
-- **Columnar OLAP & Storage Engines:** Sub-200ms analytical execution over **ClickHouse Cloud**, automated runtime schema discovery, and zero-downtime failover to in-memory **DuckDB**.
-- **Protocol Engineering & Fault Tolerance:** Interfacing services with databases and external runtimes via the **Model Context Protocol (FastMCP)**; self-healing reflection loops that intercept database syntax exceptions and iteratively self-heal queries.
+- **High-Throughput Streaming APIs:** Asynchronous services using FastAPI, Node.js, and Apollo GraphQL, with connection pooling and Server-Sent Events (SSE) for incremental execution feedback.
+- **Analytical Query Gateways:** Analytical query execution layers leveraging ClickHouse Cloud, dynamic schema introspection, and automated fallback to in-memory DuckDB during cluster disruptions.
+- **Protocol & Fault-Tolerance Engineering:** Structured runtime integrations via the Model Context Protocol (FastMCP), pairing driver-level error interception with iterative SQL syntax reflection.
 
 ---
 
-### 🛠️ Technical Stack
+### Featured Systems
 
-<div align="center">
-  <p align="center">
-    <a href="https://skillicons.dev">
-      <img src="https://skillicons.dev/icons?i=py,ts,fastapi,nodejs,express,graphql,postgres,docker,gcp,linux,bash,cpp&theme=dark" alt="Technical Stack Icons" />
-    </a>
-  </p>
-</div>
+#### [OmniQuery AI](https://github.com/Divyanshneginot/OmniQuery-AI)
+*Translates natural language questions into executable ClickHouse OLAP SQL with real-time SSE execution telemetry.*
 
-<div align="center">
-
-| Domain | Technologies |
-|---|---|
-| **Core Languages** | Python, TypeScript, JavaScript, SQL, C++, Java, Bash |
-| **Backend & Distributed Systems** | FastAPI, Node.js, Express, Apollo GraphQL, REST APIs, Server-Sent Events (SSE), AsyncIO, Concurrency, Microservices |
-| **Databases & Storage Engines** | ClickHouse Cloud, DuckDB, PostgreSQL, ChromaDB, Redis, MongoDB |
-| **Protocols & Infrastructure** | Model Context Protocol (FastMCP), Docker, GitHub Actions (CI/CD), Linux/Unix, Google Cloud (GCP), OCI |
-
-</div>
-
----
-
-### 🚀 Featured System
-
-#### 🎬 [OmniQuery AI](https://github.com/Divyanshneginot/OmniQuery-AI) · [Live Application](https://omni-query-ai.vercel.app/)
-*High-performance analytical query gateway translating natural language into ClickHouse OLAP SQL with real-time SSE streaming.*
+- **Dynamic Schema Discovery:** Connects to ClickHouse via Model Context Protocol (`mcp-clickhouse`) to dynamically inspect table structures, constraints, and partitions before compiling queries.
+- **Iterative Error Recovery:** Intercepts driver-level compilation and syntax errors, submitting execution context back through reflection logic to correct dialect-specific syntax before retrying.
+- **Resilient Storage Fallback:** Routes analytical workloads to in-memory DuckDB when ClickHouse Cloud clusters encounter connectivity degradation or rate limits.
+- **Live Telemetry Streaming:** Emits step-by-step query planning status, execution timing, and final record batches over an asynchronous Server-Sent Events (SSE) stream.
+- **Stack:** Python, FastAPI, ClickHouse Cloud, DuckDB, FastMCP, AsyncIO, Docker
 
 ```
-User Request ──► FastAPI SSE Gateway ──► Query Planning & Introspection (Google ADK)
-                                                         │
-      ┌──────────────────────────────────────────────────┴────────────────────────────────┐
-      ▼                                                                                   ▼
-Runtime Protocol Handler (FastMCP)                                          Execution & Self-Healing Loop
-(mcp-clickhouse: table discovery)                                           (Catches compiler errors & heals)
-      │                                                                                   │
-      ▼                                                                                   ▼
-ClickHouse Cloud (GCP) ──[Automatic Failover]──► In-Memory DuckDB ─────────► Async SSE Stream ──► Client
+User Prompt ──► FastAPI SSE Gateway ──► Schema Introspection (FastMCP)
+                                                │
+                                                ▼
+ClickHouse Cloud ──[Fallback on Failure]──► In-Memory DuckDB ──► SSE Stream ──► Client
 ```
 
-- **Query Gateway & Protocol:** Built a high-performance backend gateway utilizing FastAPI and Model Context Protocol (`mcp-clickhouse`), dynamically introspecting schemas and compiling natural language queries into optimized ClickHouse SQL.
-- **Self-Healing Execution Loop:** Intercepts database compiler exceptions and SQL dialect errors at the driver level, running reflection logic to iteratively regenerate and execute valid SQL against the target dialect.
-- **Zero-Downtime Dual Engine:** Automated failover redirecting analytical queries from ClickHouse Cloud on GCP to in-memory DuckDB during cluster degradation or network partitions.
-- **Real-Time Event Streaming:** Implemented an asynchronous Server-Sent Events (SSE) streaming engine delivering live query execution plans, timing metrics, and data payloads.
-- **Stack:** `Python` · `FastAPI` · `ClickHouse Cloud` · `FastMCP` · `DuckDB` · `AsyncIO` · `TypeScript` · `Docker`
+**Evidence & Demo:**  
+[Repository](https://github.com/Divyanshneginot/OmniQuery-AI) · [Live Web Application](https://omni-query-ai.vercel.app/) · [Release v1.0.0](https://github.com/Divyanshneginot/OmniQuery-AI/releases/tag/v1.0.0)  
+<!-- Add 15-30s product demo GIF or screenshot: docs/assets/omniquery-demo.gif -->
 
 <br/>
 
-#### 🛡️ [Turtleneck](https://github.com/Divyanshneginot/turtleneck)
-*Senior UI/UX architect and runtime policy engine for AI coding agents with automated WCAG AA gates.*
+#### [Turtleneck](https://github.com/Divyanshneginot/turtleneck)
+*Senior UI/UX architect and runtime policy engine enforcing design systems and accessibility rules on AI coding agents.*
 
-- **Design Taste Enforcement:** Intercepts agent code generation pipelines across Claude Code, Cursor, Windsurf, Copilot, and Google Antigravity, preventing generic AI interface slop (low-contrast opacity, 800ms delays, broken keyboard focus).
-- **Automated Quality Gates:** Bundles verifiable test suites asserting contrast ratios, touch targets, and motion budgets with standard-library zero-dependency installers.
-- **Stack:** `Python` · `Agentic Frameworks` · `Design Systems` · `WCAG 2.2` · `CI/CD`
+- **Design Policy Enforcement:** Provides structured prompt rules and workspace analysis to prevent common failure modes in AI-generated UIs (low-contrast text, missing focus states, unconstrained animations).
+- **Automated Verification:** Integrates test suites validating color contrast ratios, layout densities, and motion budgets against WCAG AA standards.
+- **Zero-Dependency Tooling:** Lightweight Python standard-library installer supporting Claude Code, Cursor, Windsurf, Copilot, and Antigravity.
+- **Stack:** Python, Shell, Design Tokens, WCAG 2.2, GitHub Actions CI
 
----
-
-### 📜 Certifications & Accreditations
-
-- 🐳 **Full Stack Open: Containers (Docker)** — University of Helsinki (*Sep 2026*) · [Verify](https://courses.mooc.fi/certificates/validate/en46yghwh8mmy4p)
-- 🔷 **Full Stack Open: TypeScript** — University of Helsinki (*Aug 2026*) · [Verify](https://courses.mooc.fi/certificates/validate/ujmksp84ds2xbi3)
-- 🧠 **LLM Zoomcamp 2026** — DataTalks.Club (*Aug 2026*) · *ID: 6F7D81*
-- 🕸️ **Full Stack Open: GraphQL** — University of Helsinki (*Jul 2026*) · [Verify](https://courses.mooc.fi/certificates/validate/pzaedinbu35e4aj)
-- 🌐 **Full Stack Open: Core (React, Node, CI/CD)** — University of Helsinki (*Jun 2026*) · [Verify](https://studies.cs.helsinki.fi/stats/api/certificate/fullstackopen/en/9eb2299a446d7e2bf6642ef1db80c49f)
-- 📊 **Applied Data Science Lab** — WorldQuant University (*Apr 2026*)
-- ☁️ **Oracle Cloud Infrastructure 2025 AI Foundations Associate** — Oracle (*Oct 2025*)
+**Evidence & Demo:**  
+[Repository](https://github.com/Divyanshneginot/turtleneck) · [Release v1.0.0](https://github.com/Divyanshneginot/turtleneck/releases/tag/v1.0.0)
 
 ---
 
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,16,28&height=100&section=footer" width="100%"/>
-</div>
+### Technical Toolkit
 
-<div align="center">
-  <sub>Divyansh Negi · <a href="https://linkedin.com/in/divyanshneginot">LinkedIn</a> · <a href="mailto:divyanshneginot@gmail.com">Email</a> · <a href="https://github.com/Divyanshneginot/Divyanshneginot/blob/main/Divyansh%20Negi%20-%20Resume.pdf">Resume</a></sub>
-</div>
+| Category | Tools & Technologies |
+|---|---|
+| **Languages** | Python, TypeScript, JavaScript, SQL, C++, Bash |
+| **Backend & APIs** | FastAPI, Node.js, Express, Apollo GraphQL, REST, Server-Sent Events (SSE), AsyncIO |
+| **Data & Infrastructure** | ClickHouse, DuckDB, PostgreSQL, Redis, Docker, GitHub Actions (CI/CD), Linux |
+| **Protocols & Agent Tooling** | Model Context Protocol (FastMCP), Agent Architectures, Prompt Frameworks |
+
+---
+
+### Certifications & Verification
+
+- **Full Stack Open: Containers (Docker)** — University of Helsinki · [Verify](https://courses.mooc.fi/certificates/validate/en46yghwh8mmy4p)
+- **Full Stack Open: TypeScript** — University of Helsinki · [Verify](https://courses.mooc.fi/certificates/validate/ujmksp84ds2xbi3)
+- **Full Stack Open: GraphQL** — University of Helsinki · [Verify](https://courses.mooc.fi/certificates/validate/pzaedinbu35e4aj)
+- **Full Stack Open: Core (React, Node, CI/CD)** — University of Helsinki · [Verify](https://studies.cs.helsinki.fi/stats/api/certificate/fullstackopen/en/9eb2299a446d7e2bf6642ef1db80c49f)
+- **LLM Zoomcamp** — DataTalks.Club (Credential ID: `6F7D81`)
+- **Applied Data Science Lab** — WorldQuant University
+- **OCI AI Foundations Associate** — Oracle
+
+---
+
+### Contact
+
+- **Email:** [divyanshneginot@gmail.com](mailto:divyanshneginot@gmail.com)
+- **LinkedIn:** [linkedin.com/in/divyanshneginot](https://linkedin.com/in/divyanshneginot)
+- **GitHub:** [github.com/Divyanshneginot](https://github.com/Divyanshneginot)
